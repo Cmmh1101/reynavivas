@@ -1,0 +1,524 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+:root {
+  --light-gray: #f1f1f1;
+  --dark-grey: #253340;
+  --transparent-dark-grey: #25334083;
+  --yellow-color: #d8bf33;
+  --dark-text: #383b42;
+  --dark-blue-transparent: #05184473;
+  --dark-blue: #051844;
+  --light-blue: #04bfbf;
+  --dark-aqua: #0f808c;
+  --link-color: rgb(250, 242, 134);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.nav-bg {
+  background-color: var(--transparent-dark-grey);
+}
+
+.navbar-toggler {
+  color: var(--light-gray);
+  text-decoration: none;
+}
+
+.navbar-brand {
+  border: 2px outset #fff;
+  padding: 0 10px;
+  font-size: 2rem;
+}
+
+.navbar-toggler-icon {
+  color: var(--light-gray);
+  text-decoration: none;
+  outline: none !important;
+}
+
+.navbar-nav .nav-item .nav-link {
+  color: var(--light-gray);
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  padding: 0 15px;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+  color: var(--light-blue);
+}
+
+/* ====== HERO ====== */
+
+#hero .jumbotron {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url(/img/hero1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+}
+.jumbotron h1 {
+  color: var(--light-gray);
+  text-transform: uppercase;
+  font-size: 4rem;
+  letter-spacing: 6px;
+}
+.jumbotron p {
+  color: var(--light-gray);
+  text-transform: capitalize;
+  font-size: 1.8rem;
+}
+
+.heroSpan {
+  color: var(--dark-aqua);
+}
+.jumbotron button {
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  font-weight: 300;
+  background-color: transparent;
+  outline: none;
+  padding: 5px 20px;
+  border: 2px solid var(--dark-aqua);
+  color: var(--dark-aqua);
+  transform: translateY(0);
+  transition: all 0.3s ease-in-out;
+  border-radius: 5px;
+}
+.jumbotron button:hover {
+  font-size: 1.3rem;
+  font-weight: 500;
+  background-color: var(--light-gray);
+  border: 3px solid var(--dark-aqua);
+  color: var(--dark-aqua);
+  transform: translateY(3px);
+  -webkit-box-shadow: -2px 2px 4px 0px rgba(6, 102, 100, 0.73);
+  box-shadow: -2px 2px 4px 0px rgba(6, 102, 100, 0.73);
+}
+.jumbotron button a {
+  text-decoration: none;
+  color: var(--dark-aqua);
+}
+
+/* ====== END OF HERO ====== */
+
+/* ====== INTRO ====== */
+
+#intro .jumbotron {
+  background-color: var(--light-gray);
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  overflow: hidden;
+}
+#intro .jumbotron .intro {
+  padding: 80px;
+}
+#intro .jumbotron h2 {
+  margin-bottom: 50px;
+  font-size: 2rem;
+  color: var(--dark-aqua);
+}
+
+#intro .jumbotron p {
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+  color: var(--dark-grey);
+  text-transform: none;
+  text-align: left;
+}
+
+#intro .jumbotron .image {
+  background-image: url(/img/hero.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0;
+}
+
+@media only screen and (max-width: 767px) {
+  #intro .jumbotron .image {
+    height: 200px;
+  }
+}
+
+/* END OF INTRO */
+
+/* ABOUT ME */
+
+#about {
+  width: 100%;
+  height: 100vh;
+}
+#about .image {
+  background-image: url(/img/hero.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* ====== END OF ABOUT ME ====== */
+
+/* ====== Stories ====== */
+
+.stories {
+  /* height: 100vh; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 100px auto;
+}
+.story-box {
+  padding: 15px;
+  background: rgb(81, 207, 238);
+  margin-bottom: 30px;
+  position: relative;
+  border-radius: 10px;
+}
+.story-icon {
+  width: 90px;
+  height: 90px;
+  text-align: center;
+  line-height: 90px;
+}
+.story-icon i {
+  font-size: 4rem;
+  color: #fff;
+  mix-blend-mode: difference;
+}
+.story-box h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  mix-blend-mode: difference;
+}
+.story-box p {
+  font-size: 1.2rem;
+  font-weight: normal;
+  color: #fff;
+  mix-blend-mode: difference;
+}
+.overlay {
+  margin: 20px auto;
+  border: none;
+  padding: 10px 44px;
+  /* font-size: 20px; */
+  position: relative;
+  /* display: inline-block; */
+}
+.overlay:before {
+  transition: all 0.85s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  content: "";
+  width: 50%;
+  height: 100%;
+  background: var(--dark-blue);
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 10px 0 0 10px;
+}
+.overlay:hover:before {
+  background: var(--dark-blue);
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* ====== End of Stories ====== */
+
+/* ====== Finished Project Section ====== */
+
+.finished-projects {
+  margin: 100px 0;
+}
+.project-item {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  max-width: 530px;
+  margin: auto auto 1rem;
+}
+
+.project-item .text {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  background-color: var(--dark-blue-transparent);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+}
+.project-item .text .des {
+  color: #fff;
+  margin: auto 32px 32px;
+}
+.project-item .text .des h2 {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+.project-item .text .des p {
+  font-weight: lighter;
+  font-size: 1.3rem;
+}
+
+@media (min-width: 992px) {
+  .project-item {
+    max-width: none;
+    margin: 0;
+  }
+  .project-item .text {
+    transition: clip-path 0.25s ease-out, background-color 0.7s;
+    clip-path: inset(0px);
+  }
+  .project-item .text .des {
+    transition: opacity 0.25s;
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-bottom: 80px;
+  }
+  .project-item img {
+    transition: clip-path 0.25s ease-out;
+    clip-path: inset(-1px);
+  }
+  .project-item:hover img {
+    clip-path: inset(32px);
+  }
+  .project-item:hover .text {
+    background-color: var(--dark-blue-transparent);
+  }
+}
+
+/* ====== End Of Finished Project Section ====== */
+
+/* ====== Donate Section ====== */
+.donation-sec {
+  margin: 200px 0 300px 0;
+}
+.donation-form .input-field .input-group {
+  width: 100%;
+  border: 1px solid var(--dark-blue);
+  border-radius: 7px;
+  padding: 5px 10px;
+  box-shadow: 0 3px 6px var(--dark-blue-transparent);
+}
+.donation-form .input-field .input-group .input-group-text {
+  font-size: 1rem;
+  background: transparent;
+  border: 0;
+  font-weight: bold;
+}
+.donation-form .input-field .input-group .form-control {
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  border-bottom: 0;
+  border-top: 0;
+  border-right: 0;
+  border-radius: 0;
+  padding: 0 0 0 25px;
+  height: 50px;
+  font-size: 1rem;
+  color: var(--dark-grey);
+}
+.donation-form .input-field .input-group .form-control::placeholder {
+  font-size: 1rem;
+  color: rgb(167, 166, 166);
+  font-weight: 400;
+}
+.donation-form .input-field .input-group .form-control:focus {
+  outline: none;
+  box-shadow: none;
+}
+.donation-form .amount .need {
+  box-shadow: 0 3px 6px var(--dark-blue-transparent);
+  padding: 18px 15px;
+  border-radius: 7px;
+  border: 1px solid var(--light-blue);
+  display: block;
+  overflow: hidden;
+}
+
+.donation-form .amount .need .select h5 {
+  font-size: 1rem;
+  color: var(--light-blue);
+  margin-bottom: 0;
+}
+/* .donation-form .amount .need .funds {
+  
+} */
+.donation-form .amount .need .funds label {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--dark-blue-transparent);
+  margin-bottom: 0;
+}
+
+@media (max-width: 767px) {
+  .donation-form .amount .need {
+    display: block !important;
+    margin-top: 15px;
+  }
+  .donation-form .amount .need .funds {
+    width: 33.33%;
+    float: left;
+    margin-top: 15px;
+  }
+}
+.donation-btn {
+  margin-top: 50px;
+}
+.btn-don {
+  color: #fff;
+  border-radius: 50px;
+  background: var(--light-gray);
+  border: 2px solid var(--green);
+  color: var(--green);
+  transition: all 0.3s ease-in-out;
+}
+.btn-don:hover {
+  color: var(--light-blue);
+  background: #0a6801;
+  color: var(--light-gray);
+  text-decoration: none;
+  border: 2px solid var(--light-gray);
+}
+/* ====== End Of Donate Section ====== */
+
+/* ====== Footer Section ====== */
+
+.footer {
+  background: rgb(10, 37, 113);
+  background: linear-gradient(
+    180deg,
+    rgba(10, 37, 113, 1) 0%,
+    rgba(16, 164, 194, 0.6488970588235294) 34%,
+    rgba(16, 164, 194, 0.48082983193277307) 87%
+  );
+  padding: 0 0 30px 0;
+  color: #000;
+  font-size: 15px;
+}
+.footer .footer-top {
+  padding: 60px 0 30px 0;
+}
+.footer .footer-top .footer-des {
+  margin-top: -90px;
+  margin-bottom: 15px;
+  background: var(--dark-blue);
+  color: var(--light-gray);
+  border-top: 4px solid var(--light-blue);
+  text-align: center;
+  padding: 30px 20px;
+}
+.footer .footer-top .footer-des h3 {
+  font-size: 1.3rem;
+  margin: 0 0 2px 0;
+  padding: 2px 0 2px 0;
+  line-height: 1;
+  font-weight: bold;
+}
+.footer .footer-top .footer-des p {
+  font-size: 0.8rem;
+  line-height: 24px;
+  margin-bottom: 0;
+}
+.footer .footer-top .social-links a {
+  font-size: 1rem;
+  display: inline-block;
+  background: var(--light-blue);
+  color: var(--dark-blue);
+  line-height: 1;
+  padding: 8px 8px;
+  margin-right: 4px;
+  border-radius: 50%;
+  text-align: center;
+  width: 36px;
+  transition: 0.3s;
+}
+.footer .footer-top .social-links a:hover {
+  background: var(--dark-blue);
+  color: var(--light-gray);
+  text-decoration: none;
+}
+.footer .footer-top h4 {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #000;
+  position: relative;
+  padding-bottom: 0.6rem;
+}
+.footer .footer-top .footer-links {
+  margin-bottom: 30px;
+}
+.footer .footer-top .footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer .footer-top .footer-links ul i {
+  padding-right: 2px;
+  color: #000;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+.footer .footer-top .footer-links ul li {
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+}
+.footer .footer-top .footer-links ul li:first-child {
+  padding-top: 0;
+}
+.footer .footer-top .footer-links ul a {
+  color: #000;
+  transition: 0.3s;
+  display: inline-block;
+  line-height: 1;
+  text-decoration: none;
+}
+.footer .footer-top .footer-links ul a:hover {
+  color: var(--dark-blue);
+}
+.footer .footer-top .footer-newsletter form {
+  margin-top: 30px;
+  background: 6px 10px;
+  position: relative;
+  border-radius: 4px;
+}
+.footer .footer-top .footer-newsletter form input[type="email"] {
+  border: 0;
+  padding: 4px;
+  width: calc(100% - 110px);
+  border-radius: 4px 0 0 4px;
+}
+.footer .footer-top .footer-newsletter form input[type="email"]::placeholder {
+  text-transform: capitalize;
+}
+.footer .footer-top .footer-newsletter form input[type="submit"] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  border: 0;
+  background: none;
+  font-size: 1rem;
+  text-transform: capitalize;
+  padding: 0 20px;
+  background: var(--dark-blue);
+  color: var(--light-gray);
+  transition: 0.3s;
+  border-radius: 0 4px 4px 0;
+}
+.footer .footer-top .footer-newsletter form input[type="submit"]:hover {
+  background: var(--light-blue);
+  color: var(--dark-blue);
+}
+
+/* ====== End of Footer Section ====== */
