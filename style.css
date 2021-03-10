@@ -158,12 +158,78 @@
 
 #about {
   width: 100%;
-  height: 100vh;
+  height: auto;
+  padding: 30px 100px;
 }
-#about .image {
-  background-image: url(/img/hero.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
+#about .img-container {
+  width: 320px;
+  height: 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#about .img-container .img-circle {
+  width: 300px;
+  height: 300px;
+  border: 8px solid var(--light-gray);
+  border-radius: 50%;
+  position: absolute;
+  top: 170px;
+  z-index: 2;
+}
+#about .about-cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 0;
+}
+
+#about .about-container {
+  background-color: var(--light-gray);
+  padding: 200px 100px 100px 100px;
+  text-align: center;
+}
+#about .about-container h2 {
+  color: var(--dark-aqua);
+  text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+#about .about-container p {
+  text-align: left;
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+  color: var(--dark-grey);
+}
+.about-container button {
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 400;
+  background-color: transparent;
+  outline: none;
+  padding: 5px 20px;
+  border: 2px solid var(--dark-aqua);
+  color: var(--dark-aqua);
+  transform: translateY(0);
+  transition: all 0.3s ease-in-out;
+  border-radius: 5px;
+}
+.about-container button:hover {
+  font-weight: 500;
+  background-color: #fff;
+  border: 3px solid var(--dark-aqua);
+  color: var(--dark-aqua);
+  transform: translateY(3px);
+  -webkit-box-shadow: 0 0 4px 0 rgba(6, 102, 100, 0.73);
+  box-shadow: 0 0 4px 0 rgba(6, 102, 100, 0.73);
+}
+.about-container button a {
+  text-decoration: none;
+  color: var(--dark-aqua);
 }
 
 /* ====== END OF ABOUT ME ====== */
@@ -171,7 +237,6 @@
 /* ====== Stories ====== */
 
 .stories {
-  /* height: 100vh; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -179,33 +244,30 @@
 }
 .story-box {
   padding: 15px;
-  background: rgb(81, 207, 238);
-  margin-bottom: 30px;
+  background: var(--light-gray);
+  margin: 30px 0;
   position: relative;
-  border-radius: 10px;
+  border-radius: 3px;
 }
-.story-icon {
-  width: 90px;
-  height: 90px;
-  text-align: center;
-  line-height: 90px;
-}
-.story-icon i {
-  font-size: 4rem;
-  color: #fff;
-  mix-blend-mode: difference;
-}
+
 .story-box h2 {
   font-size: 2rem;
-  font-weight: bold;
+  font-weight: 400;
   color: #fff;
   mix-blend-mode: difference;
+  margin: 30px 0;
+  text-align: center;
 }
 .story-box p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: normal;
   color: #fff;
   mix-blend-mode: difference;
+}
+.story-box a {
+  text-align: center;
+
+  z-index: 3;
 }
 .overlay {
   margin: 20px auto;
@@ -218,18 +280,21 @@
 .overlay:before {
   transition: all 0.85s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   content: "";
-  width: 50%;
-  height: 100%;
-  background: var(--dark-blue);
+  /* width: 50%;
+  height: 100%; */
+  width: 100%;
+  height: 30%;
+  background: var(--dark-aqua);
   position: absolute;
   top: 0;
   left: 0;
-  border-radius: 10px 0 0 10px;
+  border-radius: 3px 0 0 3px;
 }
 .overlay:hover:before {
-  background: var(--dark-blue);
-  width: 100%;
-  border-radius: 10px;
+  background: var(--dark-aqua);
+  /* width: 100%; */
+  height: 100%;
+  border-radius: 3px;
 }
 
 /* ====== End of Stories ====== */
